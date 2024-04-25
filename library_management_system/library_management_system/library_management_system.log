@@ -1,0 +1,823 @@
+2024-04-24T14:38:23.145-07:00  INFO 3200 --- [main] c.e.l.LibraryManagementSystemApplication : Starting LibraryManagementSystemApplication using Java 20.0.2 with PID 3200 (C:\spring workspace\projects\library_management_system\library_management_system\target\classes started by Ahmed in C:\spring workspace\projects\library_management_system\library_management_system)
+2024-04-24T14:38:23.158-07:00  INFO 3200 --- [main] c.e.l.LibraryManagementSystemApplication : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T14:38:28.883-07:00  INFO 3200 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-24T14:38:29.450-07:00  INFO 3200 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 502 ms. Found 3 JPA repository interfaces.
+2024-04-24T14:38:35.738-07:00  WARN 3200 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed
+2024-04-24T14:38:35.859-07:00  INFO 3200 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-24T14:38:36.033-07:00 ERROR 3200 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:273) ~[spring-context-6.0.19.jar:6.0.19]
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:795) ~[spring-context-6.0.19.jar:6.0.19]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:599) ~[spring-context-6.0.19.jar:6.0.19]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.11.jar:3.1.11]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.11.jar:3.1.11]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.11.jar:3.1.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324) ~[spring-boot-3.1.11.jar:3.1.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-3.1.11.jar:3.1.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.11.jar:3.1.11]
+	at com.example.library_management_system.LibraryManagementSystemApplication.main(LibraryManagementSystemApplication.java:14) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cache.annotation.ProxyCachingConfiguration': BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:408) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1330) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:558) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1125) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1100) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:507) ~[spring-beans-6.0.19.jar:6.0.19]
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': warning no match for this type name: com.example.library_management_system.service [Xlint:invalidAbsoluteTypeName]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:408) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1330) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:558) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1125) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1100) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:507) ~[spring-beans-6.0.19.jar:6.0.19]
+	... 35 common frames omitted
+Caused by: java.lang.IllegalArgumentException: warning no match for this type name: com.example.library_management_system.service [Xlint:invalidAbsoluteTypeName]
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319) ~[aspectjweaver-1.9.22.jar:na]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:222) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:193) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:172) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:366) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:318) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:596) ~[spring-beans-6.0.19.jar:6.0.19]
+	... 57 common frames omitted
+
+2024-04-24T14:41:55.081-07:00  INFO 8404 --- [main] c.e.l.LibraryManagementSystemApplication : Starting LibraryManagementSystemApplication using Java 20.0.2 with PID 8404 (C:\spring workspace\projects\library_management_system\library_management_system\target\classes started by Ahmed in C:\spring workspace\projects\library_management_system\library_management_system)
+2024-04-24T14:41:55.103-07:00  INFO 8404 --- [main] c.e.l.LibraryManagementSystemApplication : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T14:42:00.379-07:00  INFO 8404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-24T14:42:00.879-07:00  INFO 8404 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 437 ms. Found 3 JPA repository interfaces.
+2024-04-24T14:42:06.560-07:00  INFO 8404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-04-24T14:42:06.627-07:00  INFO 8404 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-24T14:42:06.630-07:00  INFO 8404 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-24T14:42:07.302-07:00  INFO 8404 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-24T14:42:07.303-07:00  INFO 8404 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 11782 ms
+2024-04-24T14:42:07.603-07:00  INFO 8404 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-24T14:42:09.252-07:00  INFO 8404 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/library user=ADDMIN
+2024-04-24T14:42:09.262-07:00  INFO 8404 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-24T14:42:09.340-07:00  INFO 8404 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/library'
+2024-04-24T14:42:10.447-07:00  INFO 8404 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-24T14:42:10.886-07:00  INFO 8404 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.24.Final
+2024-04-24T14:42:10.904-07:00  INFO 8404 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-04-24T14:42:14.318-07:00  INFO 8404 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-24T14:42:14.685-07:00  WARN 8404 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-24T14:42:22.646-07:00  INFO 8404 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-24T14:42:23.079-07:00  INFO 8404 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-24T14:42:30.356-07:00  WARN 8404 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-24T14:42:36.135-07:00  INFO 8404 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-24T14:42:36.215-07:00  INFO 8404 --- [main] c.e.l.LibraryManagementSystemApplication : Started LibraryManagementSystemApplication in 44.304 seconds (process running for 47.088)
+2024-04-24T14:42:38.002-07:00  INFO 8404 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: PatronDto com.example.library_management_system.service.PatronService.insert(PatronDto)	with args:([Ljava.lang.Object;@9da386c) 		took:1707ms
+2024-04-24T14:42:38.036-07:00  INFO 8404 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: PatronDto com.example.library_management_system.service.PatronService.insert(PatronDto)	with args:([Ljava.lang.Object;@4ea4290f) 		took:32ms
+2024-04-24T14:42:38.141-07:00  INFO 8404 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: ResponseEntity com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@5fdcc63f) 		took:102ms
+2024-04-24T14:42:38.165-07:00  INFO 8404 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: ResponseEntity com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@85104d6) 		took:23ms
+2024-04-24T14:43:23.235-07:00  INFO 8404 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-24T14:43:23.242-07:00  INFO 8404 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-24T14:43:23.270-07:00  INFO 8404 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2024-04-24T14:43:24.354-07:00  INFO 8404 --- [http-nio-8080-exec-1] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: List com.example.library_management_system.service.PatronService.findAll()	with args:([Ljava.lang.Object;@6ac79e6) 		took:218ms
+2024-04-24T14:47:04.455-07:00  INFO 11212 --- [main] c.e.l.LibraryManagementSystemApplication : Starting LibraryManagementSystemApplication using Java 20.0.2 with PID 11212 (C:\spring workspace\projects\library_management_system\library_management_system\target\classes started by Ahmed in C:\spring workspace\projects\library_management_system\library_management_system)
+2024-04-24T14:47:04.467-07:00  INFO 11212 --- [main] c.e.l.LibraryManagementSystemApplication : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T14:47:09.604-07:00  INFO 11212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-24T14:47:10.080-07:00  INFO 11212 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 410 ms. Found 3 JPA repository interfaces.
+2024-04-24T14:47:16.295-07:00  INFO 11212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-04-24T14:47:16.364-07:00  INFO 11212 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-24T14:47:16.366-07:00  INFO 11212 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-24T14:47:17.034-07:00  INFO 11212 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-24T14:47:17.036-07:00  INFO 11212 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 12144 ms
+2024-04-24T14:47:17.353-07:00  INFO 11212 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-24T14:47:18.916-07:00  INFO 11212 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/library user=ADDMIN
+2024-04-24T14:47:18.928-07:00  INFO 11212 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-24T14:47:19.005-07:00  INFO 11212 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/library'
+2024-04-24T14:47:20.035-07:00  INFO 11212 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-24T14:47:20.506-07:00  INFO 11212 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.24.Final
+2024-04-24T14:47:20.519-07:00  INFO 11212 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-04-24T14:47:22.320-07:00  INFO 11212 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-24T14:47:22.600-07:00  WARN 11212 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-24T14:47:28.855-07:00  INFO 11212 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-24T14:47:29.197-07:00  INFO 11212 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-24T14:47:35.833-07:00  WARN 11212 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-24T14:47:41.647-07:00  INFO 11212 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-24T14:47:41.741-07:00  INFO 11212 --- [main] c.e.l.LibraryManagementSystemApplication : Started LibraryManagementSystemApplication in 40.979 seconds (process running for 44.78)
+2024-04-24T14:47:43.495-07:00  INFO 11212 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: PatronDto com.example.library_management_system.service.PatronService.insert(PatronDto)	with args:([Ljava.lang.Object;@73db1a6) 		took:1685ms
+2024-04-24T14:47:43.525-07:00  INFO 11212 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: PatronDto com.example.library_management_system.service.PatronService.insert(PatronDto)	with args:([Ljava.lang.Object;@10545d02) 		took:28ms
+2024-04-24T14:47:43.615-07:00  INFO 11212 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: ResponseEntity com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@a6d4547) 		took:89ms
+2024-04-24T14:47:43.642-07:00  INFO 11212 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: ResponseEntity com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@66ab3716) 		took:24ms
+2024-04-24T14:48:00.226-07:00  INFO 11212 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-24T14:48:00.228-07:00  INFO 11212 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-24T14:48:00.246-07:00  INFO 11212 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2024-04-24T14:48:01.102-07:00  INFO 11212 --- [http-nio-8080-exec-1] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: List com.example.library_management_system.service.PatronService.findAll()	with args:([Ljava.lang.Object;@71620e88) 		took:258ms
+2024-04-24T14:50:43.516-07:00  INFO 6648 --- [main] c.e.l.LibraryManagementSystemApplication : Starting LibraryManagementSystemApplication using Java 20.0.2 with PID 6648 (C:\spring workspace\projects\library_management_system\library_management_system\target\classes started by Ahmed in C:\spring workspace\projects\library_management_system\library_management_system)
+2024-04-24T14:50:43.531-07:00  INFO 6648 --- [main] c.e.l.LibraryManagementSystemApplication : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T14:50:49.162-07:00  INFO 6648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-24T14:50:49.631-07:00  INFO 6648 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 421 ms. Found 3 JPA repository interfaces.
+2024-04-24T14:50:57.085-07:00  INFO 6648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-04-24T14:50:57.151-07:00  INFO 6648 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-24T14:50:57.153-07:00  INFO 6648 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-24T14:50:57.759-07:00  INFO 6648 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-24T14:50:57.760-07:00  INFO 6648 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 13794 ms
+2024-04-24T14:50:58.226-07:00  INFO 6648 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-24T14:51:04.872-07:00  INFO 6648 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/library user=ADDMIN
+2024-04-24T14:51:04.903-07:00  INFO 6648 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-24T14:51:05.127-07:00  INFO 6648 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/library'
+2024-04-24T14:51:14.395-07:00  INFO 6648 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-24T14:51:15.145-07:00  INFO 6648 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.24.Final
+2024-04-24T14:51:15.173-07:00  INFO 6648 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-04-24T14:51:18.679-07:00  INFO 6648 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-24T14:51:19.105-07:00  WARN 6648 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-24T14:51:27.503-07:00  INFO 6648 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-24T14:51:27.858-07:00  INFO 6648 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-24T14:51:36.006-07:00  WARN 6648 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-24T14:51:49.103-07:00  INFO 6648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-24T14:51:49.187-07:00  INFO 6648 --- [main] c.e.l.LibraryManagementSystemApplication : Started LibraryManagementSystemApplication in 69.577 seconds (process running for 72.357)
+2024-04-24T14:51:51.144-07:00  INFO 6648 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: PatronDto com.example.library_management_system.service.PatronService.insert(PatronDto)	with args:([Ljava.lang.Object;@7e9ea888) 		took:1879ms
+2024-04-24T14:51:51.180-07:00  INFO 6648 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: PatronDto com.example.library_management_system.service.PatronService.insert(PatronDto)	with args:([Ljava.lang.Object;@7f19430f) 		took:34ms
+2024-04-24T14:51:51.315-07:00  INFO 6648 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: ResponseEntity com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@51a65f56) 		took:131ms
+2024-04-24T14:51:51.344-07:00  INFO 6648 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: ResponseEntity com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@14ecd835) 		took:28ms
+2024-04-24T14:51:57.888-07:00  INFO 6648 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-24T14:51:57.889-07:00  INFO 6648 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-24T14:51:57.901-07:00  INFO 6648 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2024-04-24T14:51:59.049-07:00  INFO 6648 --- [http-nio-8080-exec-1] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: List com.example.library_management_system.service.PatronService.findAll()	with args:([Ljava.lang.Object;@7def2a03) 		took:345ms
+2024-04-24T14:55:48.601-07:00  INFO 10040 --- [main] c.e.l.LibraryManagementSystemApplication : Starting LibraryManagementSystemApplication using Java 20.0.2 with PID 10040 (C:\spring workspace\projects\library_management_system\library_management_system\target\classes started by Ahmed in C:\spring workspace\projects\library_management_system\library_management_system)
+2024-04-24T14:55:48.616-07:00  INFO 10040 --- [main] c.e.l.LibraryManagementSystemApplication : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T14:55:55.362-07:00  INFO 10040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-24T14:55:55.849-07:00  INFO 10040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 439 ms. Found 3 JPA repository interfaces.
+2024-04-24T14:55:58.377-07:00  WARN 10040 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed
+2024-04-24T14:55:58.590-07:00  INFO 10040 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-24T14:55:58.728-07:00 ERROR 10040 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:273) ~[spring-context-6.0.19.jar:6.0.19]
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:795) ~[spring-context-6.0.19.jar:6.0.19]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:599) ~[spring-context-6.0.19.jar:6.0.19]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.11.jar:3.1.11]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.11.jar:3.1.11]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.11.jar:3.1.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324) ~[spring-boot-3.1.11.jar:3.1.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-3.1.11.jar:3.1.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.11.jar:3.1.11]
+	at com.example.library_management_system.LibraryManagementSystemApplication.main(LibraryManagementSystemApplication.java:14) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cache.annotation.ProxyCachingConfiguration': BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:408) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1330) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:558) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1125) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1100) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:507) ~[spring-beans-6.0.19.jar:6.0.19]
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': warning no match for this type name: com.example.library_management_system.service [Xlint:invalidAbsoluteTypeName]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:408) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1330) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:558) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1125) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1100) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:507) ~[spring-beans-6.0.19.jar:6.0.19]
+	... 35 common frames omitted
+Caused by: java.lang.IllegalArgumentException: warning no match for this type name: com.example.library_management_system.service [Xlint:invalidAbsoluteTypeName]
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319) ~[aspectjweaver-1.9.22.jar:na]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:222) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:193) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:172) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:366) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:318) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:596) ~[spring-beans-6.0.19.jar:6.0.19]
+	... 57 common frames omitted
+
+2024-04-24T15:03:49.601-07:00  INFO 13288 --- [main] c.e.l.LibraryManagementSystemApplication : Starting LibraryManagementSystemApplication using Java 20.0.2 with PID 13288 (C:\spring workspace\projects\library_management_system\library_management_system\target\classes started by Ahmed in C:\spring workspace\projects\library_management_system\library_management_system)
+2024-04-24T15:03:49.625-07:00  INFO 13288 --- [main] c.e.l.LibraryManagementSystemApplication : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T15:03:55.531-07:00  INFO 13288 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-24T15:03:56.031-07:00  INFO 13288 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 450 ms. Found 3 JPA repository interfaces.
+2024-04-24T15:03:59.702-07:00  WARN 13288 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed
+2024-04-24T15:03:59.855-07:00  INFO 13288 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-24T15:04:00.058-07:00 ERROR 13288 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'projectingArgumentResolverBeanPostProcessor' defined in class path resource [org/springframework/data/web/config/ProjectingArgumentResolverRegistrar.class]: BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.registerBeanPostProcessors(PostProcessorRegistrationDelegate.java:273) ~[spring-context-6.0.19.jar:6.0.19]
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:795) ~[spring-context-6.0.19.jar:6.0.19]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:599) ~[spring-context-6.0.19.jar:6.0.19]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.11.jar:3.1.11]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.11.jar:3.1.11]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.11.jar:3.1.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324) ~[spring-boot-3.1.11.jar:3.1.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-3.1.11.jar:3.1.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.11.jar:3.1.11]
+	at com.example.library_management_system.LibraryManagementSystemApplication.main(LibraryManagementSystemApplication.java:14) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.cache.annotation.ProxyCachingConfiguration': BeanPostProcessor before instantiation of bean failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:513) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:408) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1330) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:558) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1125) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1100) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:507) ~[spring-beans-6.0.19.jar:6.0.19]
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration': warning no match for this type name: com.example.library_management_system.service [Xlint:invalidAbsoluteTypeName]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:408) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1330) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:558) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:518) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.BeanFactoryAdvisorRetrievalHelper.findAdvisorBeans(BeanFactoryAdvisorRetrievalHelper.java:91) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findCandidateAdvisors(AbstractAdvisorAutoProxyCreator.java:111) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator.findCandidateAdvisors(AnnotationAwareAspectJAutoProxyCreator.java:92) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.autoproxy.AspectJAwareAdvisorAutoProxyCreator.shouldSkip(AspectJAwareAdvisorAutoProxyCreator.java:101) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessBeforeInstantiation(AbstractAutoProxyCreator.java:280) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1125) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeforeInstantiation(AbstractAutowireCapableBeanFactory.java:1100) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:507) ~[spring-beans-6.0.19.jar:6.0.19]
+	... 35 common frames omitted
+Caused by: java.lang.IllegalArgumentException: warning no match for this type name: com.example.library_management_system.service [Xlint:invalidAbsoluteTypeName]
+	at org.aspectj.weaver.tools.PointcutParser.parsePointcutExpression(PointcutParser.java:319) ~[aspectjweaver-1.9.22.jar:na]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.buildPointcutExpression(AspectJExpressionPointcut.java:222) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.obtainPointcutExpression(AspectJExpressionPointcut.java:193) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.AspectJExpressionPointcut.getClassFilter(AspectJExpressionPointcut.java:172) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:226) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.support.AopUtils.canApply(AopUtils.java:288) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.support.AopUtils.findAdvisorsThatCanApply(AopUtils.java:320) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findAdvisorsThatCanApply(AbstractAdvisorAutoProxyCreator.java:128) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.findEligibleAdvisors(AbstractAdvisorAutoProxyCreator.java:97) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator.getAdvicesAndAdvisorsForBean(AbstractAdvisorAutoProxyCreator.java:78) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary(AbstractAutoProxyCreator.java:366) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.postProcessAfterInitialization(AbstractAutoProxyCreator.java:318) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:434) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1771) ~[spring-beans-6.0.19.jar:6.0.19]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:596) ~[spring-beans-6.0.19.jar:6.0.19]
+	... 57 common frames omitted
+
+2024-04-24T15:09:43.382-07:00  INFO 2296 --- [main] c.e.l.LibraryManagementSystemApplication : Starting LibraryManagementSystemApplication using Java 20.0.2 with PID 2296 (C:\spring workspace\projects\library_management_system\library_management_system\target\classes started by Ahmed in C:\spring workspace\projects\library_management_system\library_management_system)
+2024-04-24T15:09:43.410-07:00  INFO 2296 --- [main] c.e.l.LibraryManagementSystemApplication : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T15:09:59.810-07:00  INFO 2296 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-24T15:10:00.785-07:00  INFO 2296 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 914 ms. Found 3 JPA repository interfaces.
+2024-04-24T15:10:10.027-07:00  INFO 2296 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-04-24T15:10:10.139-07:00  INFO 2296 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-24T15:10:10.144-07:00  INFO 2296 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-24T15:10:11.151-07:00  INFO 2296 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-24T15:10:11.152-07:00  INFO 2296 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 26734 ms
+2024-04-24T15:10:11.682-07:00  INFO 2296 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-24T15:10:13.326-07:00  INFO 2296 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/library user=ADDMIN
+2024-04-24T15:10:13.345-07:00  INFO 2296 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-24T15:10:13.493-07:00  INFO 2296 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/library'
+2024-04-24T15:10:15.211-07:00  INFO 2296 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-24T15:10:15.709-07:00  INFO 2296 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.24.Final
+2024-04-24T15:10:15.723-07:00  INFO 2296 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-04-24T15:10:18.226-07:00  INFO 2296 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-24T15:10:18.735-07:00  WARN 2296 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-24T15:10:34.999-07:00  INFO 2296 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-24T15:10:36.310-07:00  INFO 2296 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-24T15:10:46.785-07:00  WARN 2296 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-24T15:10:53.055-07:00  INFO 2296 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-24T15:10:53.109-07:00  INFO 2296 --- [main] c.e.l.LibraryManagementSystemApplication : Started LibraryManagementSystemApplication in 80.449 seconds (process running for 96.493)
+2024-04-24T15:10:54.397-07:00  INFO 2296 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: PatronDto com.example.library_management_system.service.PatronService.insert(PatronDto)	with args:([Ljava.lang.Object;@22f1a340) 		took:1242ms
+2024-04-24T15:10:54.402-07:00  INFO 2296 --- [main] c.e.l.aspect.LogTimeAspect               : com.example.library_management_system.dto.PatronDto@3280a79a
+2024-04-24T15:10:54.430-07:00  INFO 2296 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: PatronDto com.example.library_management_system.service.PatronService.insert(PatronDto)	with args:([Ljava.lang.Object;@770be0d0) 		took:27ms
+2024-04-24T15:10:54.431-07:00  INFO 2296 --- [main] c.e.l.aspect.LogTimeAspect               : com.example.library_management_system.dto.PatronDto@6d7005e2
+2024-04-24T15:10:54.511-07:00  INFO 2296 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: ResponseEntity com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@33a39d7e) 		took:78ms
+2024-04-24T15:10:54.525-07:00  INFO 2296 --- [main] c.e.l.aspect.LogTimeAspect               : <200 OK OK,book with titleBook1 inserted,[]>
+2024-04-24T15:10:54.544-07:00  INFO 2296 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: ResponseEntity com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@5687ba39) 		took:18ms
+2024-04-24T15:10:54.545-07:00  INFO 2296 --- [main] c.e.l.aspect.LogTimeAspect               : <200 OK OK,book with titleBook2 inserted,[]>
+2024-04-24T15:11:07.675-07:00  INFO 2296 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-24T15:11:07.677-07:00  INFO 2296 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-24T15:11:07.688-07:00  INFO 2296 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2024-04-24T15:11:08.779-07:00  INFO 2296 --- [http-nio-8080-exec-1] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: BookDto com.example.library_management_system.service.BookService.findById(long)	with args:([Ljava.lang.Object;@5867c9f5) 		took:302ms
+2024-04-24T15:11:08.780-07:00  INFO 2296 --- [http-nio-8080-exec-1] c.e.l.aspect.LogTimeAspect               : com.example.library_management_system.dto.BookDto@2477faec
+2024-04-24T15:11:28.332-07:00  INFO 2296 --- [http-nio-8080-exec-2] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: List com.example.library_management_system.service.PatronService.findAll()	with args:([Ljava.lang.Object;@1faf760a) 		took:93ms
+2024-04-24T15:11:28.336-07:00  INFO 2296 --- [http-nio-8080-exec-2] c.e.l.aspect.LogTimeAspect               : [com.example.library_management_system.entity.Patron@2d364ed9, com.example.library_management_system.entity.Patron@283d4779]
+2024-04-24T15:11:44.885-07:00  INFO 2296 --- [http-nio-8080-exec-4] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: ResponseEntity com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@55585fd3) 		took:32ms
+2024-04-24T15:11:44.888-07:00  INFO 2296 --- [http-nio-8080-exec-4] c.e.l.aspect.LogTimeAspect               : <200 OK OK,book with titletitle inserted,[]>
+2024-04-24T15:14:26.034-07:00  INFO 5576 --- [main] c.e.l.LibraryManagementSystemApplication : Starting LibraryManagementSystemApplication using Java 20.0.2 with PID 5576 (C:\spring workspace\projects\library_management_system\library_management_system\target\classes started by Ahmed in C:\spring workspace\projects\library_management_system\library_management_system)
+2024-04-24T15:14:26.053-07:00  INFO 5576 --- [main] c.e.l.LibraryManagementSystemApplication : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T15:14:32.245-07:00  INFO 5576 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-24T15:14:32.700-07:00  INFO 5576 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 407 ms. Found 3 JPA repository interfaces.
+2024-04-24T15:14:38.754-07:00  INFO 5576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-04-24T15:14:38.816-07:00  INFO 5576 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-24T15:14:38.818-07:00  INFO 5576 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-24T15:14:39.486-07:00  INFO 5576 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-24T15:14:39.487-07:00  INFO 5576 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 12721 ms
+2024-04-24T15:14:39.812-07:00  INFO 5576 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-24T15:14:41.399-07:00  INFO 5576 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/library user=ADDMIN
+2024-04-24T15:14:41.408-07:00  INFO 5576 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-24T15:14:41.488-07:00  INFO 5576 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/library'
+2024-04-24T15:14:42.615-07:00  INFO 5576 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-24T15:14:43.015-07:00  INFO 5576 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.24.Final
+2024-04-24T15:14:43.027-07:00  INFO 5576 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-04-24T15:14:44.864-07:00  INFO 5576 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-24T15:14:45.182-07:00  WARN 5576 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-24T15:14:51.508-07:00  INFO 5576 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-24T15:14:51.839-07:00  INFO 5576 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-24T15:14:57.056-07:00  WARN 5576 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-24T15:15:02.469-07:00  INFO 5576 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-24T15:15:02.521-07:00  INFO 5576 --- [main] c.e.l.LibraryManagementSystemApplication : Started LibraryManagementSystemApplication in 40.944 seconds (process running for 44.654)
+2024-04-24T15:15:03.879-07:00  INFO 5576 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: PatronDto com.example.library_management_system.service.PatronService.insert(PatronDto)	with args:([Ljava.lang.Object;@52df6d0f) 		took:1311ms
+2024-04-24T15:15:03.887-07:00  INFO 5576 --- [main] c.e.l.aspect.LogTimeAspect               : com.example.library_management_system.dto.PatronDto@7680beac
+2024-04-24T15:15:03.926-07:00  INFO 5576 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: PatronDto com.example.library_management_system.service.PatronService.insert(PatronDto)	with args:([Ljava.lang.Object;@282079b9) 		took:37ms
+2024-04-24T15:15:03.927-07:00  INFO 5576 --- [main] c.e.l.aspect.LogTimeAspect               : com.example.library_management_system.dto.PatronDto@34947355
+2024-04-24T15:15:04.006-07:00  INFO 5576 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: ResponseEntity com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@62ad5f35) 		took:77ms
+2024-04-24T15:15:04.027-07:00  INFO 5576 --- [main] c.e.l.aspect.LogTimeAspect               : <200 OK OK,book with titleBook1 inserted,[]>
+2024-04-24T15:15:04.047-07:00  INFO 5576 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: ResponseEntity com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@5799b8a2) 		took:19ms
+2024-04-24T15:15:04.048-07:00  INFO 5576 --- [main] c.e.l.aspect.LogTimeAspect               : <200 OK OK,book with titleBook2 inserted,[]>
+2024-04-24T15:15:44.047-07:00  INFO 5576 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-24T15:15:44.050-07:00  INFO 5576 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-24T15:15:44.056-07:00  INFO 5576 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2024-04-24T15:15:46.701-07:00  INFO 5576 --- [http-nio-8080-exec-2] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: List com.example.library_management_system.service.PatronService.findAll()	with args:([Ljava.lang.Object;@1de1c586) 		took:1486ms
+2024-04-24T15:24:43.373-07:00  INFO 11420 --- [main] c.e.l.LibraryManagementSystemApplication : Starting LibraryManagementSystemApplication using Java 20.0.2 with PID 11420 (C:\spring workspace\projects\library_management_system\library_management_system\target\classes started by Ahmed in C:\spring workspace\projects\library_management_system\library_management_system)
+2024-04-24T15:24:43.385-07:00  INFO 11420 --- [main] c.e.l.LibraryManagementSystemApplication : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T15:24:48.266-07:00  INFO 11420 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-24T15:24:48.727-07:00  INFO 11420 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 412 ms. Found 3 JPA repository interfaces.
+2024-04-24T15:24:54.582-07:00  INFO 11420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-04-24T15:24:54.646-07:00  INFO 11420 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-24T15:24:54.647-07:00  INFO 11420 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-24T15:24:55.310-07:00  INFO 11420 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-24T15:24:55.311-07:00  INFO 11420 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 11485 ms
+2024-04-24T15:24:55.637-07:00  INFO 11420 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-24T15:24:57.212-07:00  INFO 11420 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/library user=ADDMIN
+2024-04-24T15:24:57.221-07:00  INFO 11420 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-24T15:24:57.298-07:00  INFO 11420 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/library'
+2024-04-24T15:24:58.415-07:00  INFO 11420 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-24T15:24:58.820-07:00  INFO 11420 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.24.Final
+2024-04-24T15:24:58.833-07:00  INFO 11420 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-04-24T15:25:00.681-07:00  INFO 11420 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-24T15:25:00.996-07:00  WARN 11420 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-24T15:25:07.520-07:00  INFO 11420 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-24T15:25:07.834-07:00  INFO 11420 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-24T15:25:13.876-07:00  WARN 11420 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-24T15:25:19.101-07:00  INFO 11420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-24T15:25:19.154-07:00  INFO 11420 --- [main] c.e.l.LibraryManagementSystemApplication : Started LibraryManagementSystemApplication in 38.936 seconds (process running for 41.681)
+2024-04-24T15:25:20.535-07:00  INFO 11420 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.PatronService.insert(PatronDto)	with args:([Ljava.lang.Object;@71f86562) 		took:1334ms
+2024-04-24T15:25:20.540-07:00  INFO 11420 --- [main] c.e.l.aspect.LogTimeAspect               : patron with name: Patron1 inserted
+2024-04-24T15:25:20.569-07:00  INFO 11420 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.PatronService.insert(PatronDto)	with args:([Ljava.lang.Object;@3ed3e66d) 		took:27ms
+2024-04-24T15:25:20.570-07:00  INFO 11420 --- [main] c.e.l.aspect.LogTimeAspect               : patron with name: Patron2 inserted
+2024-04-24T15:25:20.621-07:00  INFO 11420 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@72e5206) 		took:49ms
+2024-04-24T15:25:20.621-07:00  INFO 11420 --- [main] c.e.l.aspect.LogTimeAspect               : book with title Book1 inserted
+2024-04-24T15:25:20.639-07:00  INFO 11420 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@36a7586f) 		took:17ms
+2024-04-24T15:25:20.640-07:00  INFO 11420 --- [main] c.e.l.aspect.LogTimeAspect               : book with title Book2 inserted
+2024-04-24T15:28:57.111-07:00  INFO 11420 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-24T15:28:57.113-07:00  INFO 11420 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-24T15:28:57.130-07:00  INFO 11420 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2024-04-24T15:28:58.682-07:00  INFO 11420 --- [http-nio-8080-exec-2] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@151e5967) 		took:37ms
+2024-04-24T15:28:58.683-07:00  INFO 11420 --- [http-nio-8080-exec-2] c.e.l.aspect.LogTimeAspect               : book with title title inserted
+2024-04-24T15:40:43.951-07:00  WARN 11420 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=45s652ms848µs900ns).
+2024-04-24T15:55:54.257-07:00  INFO 11420 --- [http-nio-8080-exec-4] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: List com.example.library_management_system.service.BookService.findAll()	with args:([Ljava.lang.Object;@402f0a4f) 		took:591ms
+2024-04-24T16:08:55.213-07:00  INFO 1392 --- [main] c.e.l.LibraryManagementSystemApplication : Starting LibraryManagementSystemApplication using Java 20.0.2 with PID 1392 (C:\spring workspace\projects\library_management_system\library_management_system\target\classes started by Ahmed in C:\spring workspace\projects\library_management_system\library_management_system)
+2024-04-24T16:08:55.593-07:00  INFO 1392 --- [main] c.e.l.LibraryManagementSystemApplication : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T16:09:49.336-07:00  INFO 1392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-24T16:09:58.219-07:00  INFO 1392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8686 ms. Found 3 JPA repository interfaces.
+2024-04-24T16:10:24.025-07:00  INFO 1392 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-04-24T16:10:24.205-07:00  INFO 1392 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-24T16:10:24.207-07:00  INFO 1392 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-24T16:10:26.421-07:00  INFO 1392 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-24T16:10:26.423-07:00  INFO 1392 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 86332 ms
+2024-04-24T16:10:27.316-07:00  INFO 1392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-24T16:10:39.183-07:00  INFO 1392 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/library user=ADDMIN
+2024-04-24T16:10:39.266-07:00  INFO 1392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-24T16:10:39.846-07:00  INFO 1392 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/library'
+2024-04-24T16:10:43.144-07:00  INFO 1392 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-24T16:10:43.845-07:00  INFO 1392 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.24.Final
+2024-04-24T16:10:43.869-07:00  INFO 1392 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-04-24T16:10:48.214-07:00  INFO 1392 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-24T16:10:48.960-07:00  WARN 1392 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-24T16:11:10.042-07:00  INFO 1392 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-24T16:11:13.785-07:00  INFO 1392 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-24T16:11:43.165-07:00  WARN 1392 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-24T16:12:03.295-07:00  INFO 1392 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-24T16:12:03.435-07:00  INFO 1392 --- [main] c.e.l.LibraryManagementSystemApplication : Started LibraryManagementSystemApplication in 199.885 seconds (process running for 215.365)
+2024-04-24T16:12:05.608-07:00  INFO 1392 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.PatronService.insert(PatronDto)	with args:([Ljava.lang.Object;@7926d092) 		took:2042ms
+2024-04-24T16:12:05.614-07:00  INFO 1392 --- [main] c.e.l.aspect.LogTimeAspect               : patron with name: Patron1 inserted
+2024-04-24T16:12:05.665-07:00  INFO 1392 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.PatronService.insert(PatronDto)	with args:([Ljava.lang.Object;@64648af1) 		took:48ms
+2024-04-24T16:12:05.666-07:00  INFO 1392 --- [main] c.e.l.aspect.LogTimeAspect               : patron with name: Patron2 inserted
+2024-04-24T16:12:05.821-07:00  INFO 1392 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@68d1f4e2) 		took:152ms
+2024-04-24T16:12:05.822-07:00  INFO 1392 --- [main] c.e.l.aspect.LogTimeAspect               : book with title Book1 inserted
+2024-04-24T16:12:05.849-07:00  INFO 1392 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@51c7d472) 		took:26ms
+2024-04-24T16:12:05.851-07:00  INFO 1392 --- [main] c.e.l.aspect.LogTimeAspect               : book with title Book2 inserted
+2024-04-24T16:16:22.943-07:00  INFO 1392 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-24T16:16:22.969-07:00  INFO 1392 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-24T16:16:23.022-07:00  INFO 1392 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 39 ms
+2024-04-24T16:16:24.954-07:00  INFO 1392 --- [http-nio-8080-exec-2] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: List com.example.library_management_system.service.BookService.findAll()	with args:([Ljava.lang.Object;@13746339) 		took:415ms
+2024-04-24T16:18:45.300-07:00 ERROR 1392 --- [http-nio-8080-exec-5] c.e.l.aspect.LogTimeAspect               : Exception occured
+2024-04-24T16:18:45.303-07:00  INFO 1392 --- [http-nio-8080-exec-5] c.e.l.aspect.LogTimeAspect               : error occured at: com.example.library_management_system.service.BookService.findById	Exception: Book with id: 5 is not found
+2024-04-24T16:33:46.818-07:00  INFO 7464 --- [main] c.e.l.LibraryManagementSystemApplication : Starting LibraryManagementSystemApplication using Java 20.0.2 with PID 7464 (C:\spring workspace\projects\library_management_system\library_management_system\target\classes started by Ahmed in C:\spring workspace\projects\library_management_system\library_management_system)
+2024-04-24T16:33:46.841-07:00  INFO 7464 --- [main] c.e.l.LibraryManagementSystemApplication : No active profile set, falling back to 1 default profile: "default"
+2024-04-24T16:33:58.265-07:00  INFO 7464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-24T16:34:00.396-07:00  INFO 7464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2000 ms. Found 3 JPA repository interfaces.
+2024-04-24T16:34:18.192-07:00  INFO 7464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-04-24T16:34:18.277-07:00  INFO 7464 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-24T16:34:18.279-07:00  INFO 7464 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-24T16:34:19.691-07:00  INFO 7464 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-24T16:34:19.695-07:00  INFO 7464 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 31956 ms
+2024-04-24T16:34:20.541-07:00  INFO 7464 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-24T16:34:24.311-07:00  INFO 7464 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/library user=ADDMIN
+2024-04-24T16:34:24.332-07:00  INFO 7464 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-24T16:34:24.545-07:00  INFO 7464 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/library'
+2024-04-24T16:34:29.804-07:00  INFO 7464 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-24T16:34:35.074-07:00  INFO 7464 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.24.Final
+2024-04-24T16:34:35.118-07:00  INFO 7464 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-04-24T16:35:06.394-07:00  INFO 7464 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-24T16:35:08.535-07:00  WARN 7464 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-24T16:36:41.925-07:00  INFO 7464 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-24T16:37:05.368-07:00  INFO 7464 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-24T16:37:38.794-07:00  WARN 7464 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-24T16:37:50.609-07:00  INFO 7464 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-04-24T16:37:50.719-07:00  INFO 7464 --- [main] c.e.l.LibraryManagementSystemApplication : Started LibraryManagementSystemApplication in 251.08 seconds (process running for 263.058)
+2024-04-24T16:37:53.804-07:00  INFO 7464 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.PatronService.insert(PatronDto)	with args:([Ljava.lang.Object;@6cf34b88) 		took:2972ms
+2024-04-24T16:37:53.826-07:00  INFO 7464 --- [main] c.e.l.aspect.LogTimeAspect               : patron with name: Patron1 inserted
+2024-04-24T16:37:53.920-07:00  INFO 7464 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.PatronService.insert(PatronDto)	with args:([Ljava.lang.Object;@be56353) 		took:85ms
+2024-04-24T16:37:53.921-07:00  INFO 7464 --- [main] c.e.l.aspect.LogTimeAspect               : patron with name: Patron2 inserted
+2024-04-24T16:37:54.227-07:00  INFO 7464 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@7806db3f) 		took:303ms
+2024-04-24T16:37:54.229-07:00  INFO 7464 --- [main] c.e.l.aspect.LogTimeAspect               : book with title Book1 inserted
+2024-04-24T16:37:54.260-07:00  INFO 7464 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@24090832) 		took:30ms
+2024-04-24T16:37:54.261-07:00  INFO 7464 --- [main] c.e.l.aspect.LogTimeAspect               : book with title Book2 inserted
+2024-04-24T17:28:57.048-07:00  INFO 7464 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-24T17:28:57.090-07:00  INFO 7464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-24T17:28:57.371-07:00  INFO 7464 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 263 ms
+2024-04-24T17:28:59.287-07:00  INFO 7464 --- [http-nio-8080-exec-1] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: List com.example.library_management_system.service.BookService.findAll()	with args:([Ljava.lang.Object;@7c9d03af) 		took:572ms
+2024-04-24T17:31:55.169-07:00  INFO 7464 --- [http-nio-8080-exec-5] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: List com.example.library_management_system.service.PatronService.findAll()	with args:([Ljava.lang.Object;@31117f40) 		took:44ms
+2024-04-24T17:36:28.032-07:00  INFO 7464 --- [http-nio-8080-exec-2] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: BookDto com.example.library_management_system.service.BookService.findById(long)	with args:([Ljava.lang.Object;@77161e84) 		took:217ms
+2024-04-24T17:36:49.420-07:00 ERROR 7464 --- [http-nio-8080-exec-1] c.e.l.aspect.LogTimeAspect               : Exception occured
+2024-04-24T17:36:49.422-07:00  INFO 7464 --- [http-nio-8080-exec-1] c.e.l.aspect.LogTimeAspect               : error occured at: com.example.library_management_system.service.BookService.findById	Exception: Book with id: 5 is not found
+2024-04-24T17:38:56.179-07:00  INFO 7464 --- [http-nio-8080-exec-5] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: PatronDto com.example.library_management_system.service.PatronService.findById(long)	with args:([Ljava.lang.Object;@76ed0de1) 		took:24ms
+2024-04-24T17:42:14.312-07:00  INFO 7464 --- [http-nio-8080-exec-8] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: PatronDto com.example.library_management_system.service.PatronService.findById(long)	with args:([Ljava.lang.Object;@7ddbd125) 		took:18ms
+2024-04-24T17:47:01.811-07:00  INFO 7464 --- [http-nio-8080-exec-5] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.PatronService.insert(PatronDto)	with args:([Ljava.lang.Object;@af3e2f0) 		took:111ms
+2024-04-24T17:47:01.817-07:00  INFO 7464 --- [http-nio-8080-exec-5] c.e.l.aspect.LogTimeAspect               : patron with name: name3 inserted
+2024-04-24T17:48:25.376-07:00  INFO 7464 --- [http-nio-8080-exec-7] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: PatronDto com.example.library_management_system.service.PatronService.findById(long)	with args:([Ljava.lang.Object;@6eee11fb) 		took:239ms
+2024-04-24T17:48:55.685-07:00  INFO 7464 --- [http-nio-8080-exec-9] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: List com.example.library_management_system.service.PatronService.findAll()	with args:([Ljava.lang.Object;@3730f6d) 		took:187ms
+2024-04-24T17:51:05.875-07:00  INFO 7464 --- [http-nio-8080-exec-1] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@3713907b) 		took:31ms
+2024-04-24T17:51:05.877-07:00  INFO 7464 --- [http-nio-8080-exec-1] c.e.l.aspect.LogTimeAspect               : book with title title inserted
+2024-04-24T17:51:18.211-07:00  INFO 7464 --- [http-nio-8080-exec-3] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: List com.example.library_management_system.service.BookService.findAll()	with args:([Ljava.lang.Object;@35827a01) 		took:19ms
+2024-04-24T17:51:55.290-07:00  INFO 7464 --- [http-nio-8080-exec-4] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: BookDto com.example.library_management_system.service.BookService.findById(long)	with args:([Ljava.lang.Object;@6159dc9b) 		took:84ms
+2024-04-24T17:51:55.316-07:00  INFO 7464 --- [http-nio-8080-exec-4] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: PatronDto com.example.library_management_system.service.PatronService.findById(long)	with args:([Ljava.lang.Object;@6625b5e6) 		took:21ms
+2024-04-24T17:51:55.361-07:00  INFO 7464 --- [http-nio-8080-exec-4] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.BookService.updateBookStatus(Long,BookDto)	with args:([Ljava.lang.Object;@2a460d51) 		took:42ms
+2024-04-24T17:51:55.364-07:00  INFO 7464 --- [http-nio-8080-exec-4] c.e.l.aspect.LogTimeAspect               : book with id 1 updated
+2024-04-24T17:51:55.473-07:00  INFO 7464 --- [http-nio-8080-exec-4] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: void com.example.library_management_system.service.BorrowingRecordService.submitBorrowing(BorrowingDto)	with args:([Ljava.lang.Object;@5d112c3) 		took:269ms
+2024-04-24T17:52:03.159-07:00  INFO 7464 --- [http-nio-8080-exec-5] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: List com.example.library_management_system.service.BookService.findAll()	with args:([Ljava.lang.Object;@1a04f8d3) 		took:22ms
+2024-04-24T17:54:43.616-07:00  INFO 7464 --- [http-nio-8080-exec-2] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.BookService.update(Long,BookDto)	with args:([Ljava.lang.Object;@786f467) 		took:34ms
+2024-04-24T17:54:43.624-07:00  INFO 7464 --- [http-nio-8080-exec-2] c.e.l.aspect.LogTimeAspect               : book with id 2 updated
+2024-04-24T17:54:57.773-07:00  INFO 7464 --- [http-nio-8080-exec-1] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: List com.example.library_management_system.service.BookService.findAll()	with args:([Ljava.lang.Object;@38bee81a) 		took:77ms
+2024-04-24T17:55:32.694-07:00  INFO 7464 --- [http-nio-8080-exec-3] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.BookService.update(Long,BookDto)	with args:([Ljava.lang.Object;@1abcb454) 		took:29ms
+2024-04-24T17:55:32.696-07:00  INFO 7464 --- [http-nio-8080-exec-3] c.e.l.aspect.LogTimeAspect               : book with id 1 updated
+2024-04-24T17:55:48.227-07:00  INFO 7464 --- [http-nio-8080-exec-4] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: List com.example.library_management_system.service.BookService.findAll()	with args:([Ljava.lang.Object;@24834aab) 		took:14ms
+2024-04-24T17:57:33.834-07:00  INFO 7464 --- [http-nio-8080-exec-2] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: BookDto com.example.library_management_system.service.BookService.findById(long)	with args:([Ljava.lang.Object;@3dbed08e) 		took:80ms
+2024-04-24T18:01:46.208-07:00  INFO 7464 --- [http-nio-8080-exec-9] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.BookService.updateBookStatus(Long,BookDto)	with args:([Ljava.lang.Object;@1f5a9ae1) 		took:2ms
+2024-04-24T18:01:46.210-07:00  INFO 7464 --- [http-nio-8080-exec-9] c.e.l.aspect.LogTimeAspect               : book with id 1 updated
+2024-04-24T18:01:46.217-07:00  INFO 7464 --- [http-nio-8080-exec-9] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: void com.example.library_management_system.service.BorrowingRecordService.returnBook(Long)	with args:([Ljava.lang.Object;@9c73530) 		took:42ms
+2024-04-24T18:01:51.286-07:00  INFO 7464 --- [http-nio-8080-exec-8] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: List com.example.library_management_system.service.BookService.findAll()	with args:([Ljava.lang.Object;@7a6fcf47) 		took:17ms
+2024-04-24T18:05:10.932-07:00 ERROR 7464 --- [http-nio-8080-exec-5] c.e.l.aspect.LogTimeAspect               : Exception occured
+2024-04-24T18:05:10.934-07:00  INFO 7464 --- [http-nio-8080-exec-5] c.e.l.aspect.LogTimeAspect               : error occured at: com.example.library_management_system.service.BookService.insert	Exception: query did not return a unique result: 3
+2024-04-24T18:05:10.947-07:00 ERROR 7464 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.IncorrectResultSizeDataAccessException: query did not return a unique result: 3] with root cause
+
+jakarta.persistence.NonUniqueResultException: query did not return a unique result: 3
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:128) ~[hibernate-core-6.2.24.Final.jar:6.2.24.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResult(AbstractSelectionQuery.java:482) ~[hibernate-core-6.2.24.Final.jar:6.2.24.Final]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:223) ~[spring-data-jpa-3.1.11.jar:3.1.11]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92) ~[spring-data-jpa-3.1.11.jar:3.1.11]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:149) ~[spring-data-jpa-3.1.11.jar:3.1.11]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:137) ~[spring-data-jpa-3.1.11.jar:3.1.11]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:136) ~[spring-data-commons-3.1.11.jar:3.1.11]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:120) ~[spring-data-commons-3.1.11.jar:3.1.11]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164) ~[spring-data-commons-3.1.11.jar:3.1.11]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.1.11.jar:3.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70) ~[spring-data-commons-3.1.11.jar:3.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.19.jar:6.0.19]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.19.jar:6.0.19]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135) ~[spring-data-jpa-3.1.11.jar:3.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:244) ~[spring-aop-6.0.19.jar:6.0.19]
+	at jdk.proxy2/jdk.proxy2.$Proxy120.findByIsbn(Unknown Source) ~[na:na]
+	at com.example.library_management_system.service.BookService.insert(BookService.java:40) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-6.0.19.jar:6.0.19]
+	at com.example.library_management_system.aspect.LogTimeAspect.logTime(LogTimeAspect.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.cache.interceptor.CacheInterceptor.lambda$invoke$0(CacheInterceptor.java:54) ~[spring-context-6.0.19.jar:6.0.19]
+	at org.springframework.cache.interceptor.CacheAspectSupport.invokeOperation(CacheAspectSupport.java:366) ~[spring-context-6.0.19.jar:6.0.19]
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:420) ~[spring-context-6.0.19.jar:6.0.19]
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:345) ~[spring-context-6.0.19.jar:6.0.19]
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64) ~[spring-context-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703) ~[spring-aop-6.0.19.jar:6.0.19]
+	at com.example.library_management_system.service.BookService$$SpringCGLIB$$0.insert(<generated>) ~[classes/:na]
+	at com.example.library_management_system.controller.BookController.insert(BookController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.19.jar:6.0.19]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.19.jar:6.0.19]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.19.jar:6.0.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-6.0.19.jar:6.0.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:798) ~[spring-webmvc-6.0.19.jar:6.0.19]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.19.jar:6.0.19]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.19.jar:6.0.19]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.19.jar:6.0.19]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.0.19.jar:6.0.19]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.19.jar:6.0.19]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.19.jar:6.0.19]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.19.jar:6.0.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.19.jar:6.0.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.19.jar:6.0.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.19.jar:6.0.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.19.jar:6.0.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.19.jar:6.0.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+
+2024-04-24T18:05:23.759-07:00 ERROR 7464 --- [http-nio-8080-exec-7] c.e.l.aspect.LogTimeAspect               : Exception occured
+2024-04-24T18:05:23.794-07:00  INFO 7464 --- [http-nio-8080-exec-7] c.e.l.aspect.LogTimeAspect               : error occured at: com.example.library_management_system.service.BookService.insert	Exception: query did not return a unique result: 3
+2024-04-24T18:05:23.809-07:00 ERROR 7464 --- [http-nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.IncorrectResultSizeDataAccessException: query did not return a unique result: 3] with root cause
+
+jakarta.persistence.NonUniqueResultException: query did not return a unique result: 3
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:128) ~[hibernate-core-6.2.24.Final.jar:6.2.24.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResult(AbstractSelectionQuery.java:482) ~[hibernate-core-6.2.24.Final.jar:6.2.24.Final]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:223) ~[spring-data-jpa-3.1.11.jar:3.1.11]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92) ~[spring-data-jpa-3.1.11.jar:3.1.11]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:149) ~[spring-data-jpa-3.1.11.jar:3.1.11]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:137) ~[spring-data-jpa-3.1.11.jar:3.1.11]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:136) ~[spring-data-commons-3.1.11.jar:3.1.11]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:120) ~[spring-data-commons-3.1.11.jar:3.1.11]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164) ~[spring-data-commons-3.1.11.jar:3.1.11]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.1.11.jar:3.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70) ~[spring-data-commons-3.1.11.jar:3.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.19.jar:6.0.19]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.19.jar:6.0.19]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135) ~[spring-data-jpa-3.1.11.jar:3.1.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:244) ~[spring-aop-6.0.19.jar:6.0.19]
+	at jdk.proxy2/jdk.proxy2.$Proxy120.findByIsbn(Unknown Source) ~[na:na]
+	at com.example.library_management_system.service.BookService.insert(BookService.java:40) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-6.0.19.jar:6.0.19]
+	at com.example.library_management_system.aspect.LogTimeAspect.logTime(LogTimeAspect.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:57) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.cache.interceptor.CacheInterceptor.lambda$invoke$0(CacheInterceptor.java:54) ~[spring-context-6.0.19.jar:6.0.19]
+	at org.springframework.cache.interceptor.CacheAspectSupport.invokeOperation(CacheAspectSupport.java:366) ~[spring-context-6.0.19.jar:6.0.19]
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:420) ~[spring-context-6.0.19.jar:6.0.19]
+	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:345) ~[spring-context-6.0.19.jar:6.0.19]
+	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:64) ~[spring-context-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.19.jar:6.0.19]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703) ~[spring-aop-6.0.19.jar:6.0.19]
+	at com.example.library_management_system.service.BookService$$SpringCGLIB$$0.insert(<generated>) ~[classes/:na]
+	at com.example.library_management_system.controller.BookController.insert(BookController.java:29) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.19.jar:6.0.19]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.19.jar:6.0.19]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.19.jar:6.0.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-6.0.19.jar:6.0.19]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:798) ~[spring-webmvc-6.0.19.jar:6.0.19]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.19.jar:6.0.19]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.19.jar:6.0.19]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.19.jar:6.0.19]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.0.19.jar:6.0.19]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.19.jar:6.0.19]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.19.jar:6.0.19]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.20.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.19.jar:6.0.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.19.jar:6.0.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.19.jar:6.0.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.19.jar:6.0.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.19.jar:6.0.19]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.19.jar:6.0.19]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+
+2024-04-24T18:06:55.698-07:00  INFO 7464 --- [http-nio-8080-exec-9] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@7378a52e) 		took:36ms
+2024-04-24T18:06:55.699-07:00  INFO 7464 --- [http-nio-8080-exec-9] c.e.l.aspect.LogTimeAspect               : book with title title inserted
+2024-04-24T18:10:52.309-07:00  INFO 7464 --- [http-nio-8080-exec-3] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.PatronService.deleteById(long)	with args:([Ljava.lang.Object;@6b317729) 		took:259ms
+2024-04-24T18:10:52.315-07:00  INFO 7464 --- [http-nio-8080-exec-3] c.e.l.aspect.LogTimeAspect               : patron with id: 1 deleted
+2024-04-24T18:11:26.215-07:00  INFO 7464 --- [http-nio-8080-exec-1] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.BookService.deleteById(long)	with args:([Ljava.lang.Object;@6cf9e516) 		took:61ms
+2024-04-24T18:11:26.216-07:00  INFO 7464 --- [http-nio-8080-exec-1] c.e.l.aspect.LogTimeAspect               : book with id 1 deleted
+2024-04-24T18:22:50.707-07:00 ERROR 7464 --- [http-nio-8080-exec-5] c.e.l.aspect.LogTimeAspect               : Exception occured
+2024-04-24T18:22:50.709-07:00  INFO 7464 --- [http-nio-8080-exec-5] c.e.l.aspect.LogTimeAspect               : error occured at: com.example.library_management_system.service.BookService.insert	Exception: Book with isdn: isb duplicated
