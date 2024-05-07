@@ -6,6 +6,16 @@ import java.util.List;
 
 @Entity
 public class Book{
+    public Book() {
+    }
+
+    public Book( String title, String author, String publicationYear, String isbn, boolean isAvailable) {
+        this.title = title;
+        this.author = author;
+        this.publicationYear = publicationYear;
+        this.isbn = isbn;
+        this.isAvailable = isAvailable;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

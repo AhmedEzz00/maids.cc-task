@@ -1,8 +1,6 @@
 package com.example.library_management_system.controller;
 
 import com.example.library_management_system.dto.PatronDto;
-import com.example.library_management_system.entity.Book;
-import com.example.library_management_system.entity.Patron;
 import com.example.library_management_system.service.PatronService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

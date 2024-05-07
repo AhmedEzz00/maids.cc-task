@@ -1,6 +1,5 @@
 package com.example.library_management_system.dto;
 
-import com.example.library_management_system.entity.Book;
 import com.example.library_management_system.entity.BorrowingRecord;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;

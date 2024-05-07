@@ -1,10 +1,6 @@
 package com.example.library_management_system.entity;
 
 import jakarta.persistence.*;
-import jdk.jfr.Timestamp;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
 import java.util.Date;
 
 @Entity

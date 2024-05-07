@@ -1,6 +1,5 @@
 package com.example.library_management_system.entity;
 
-import com.example.library_management_system.Error.CustomErrorAttribute;
 import com.example.library_management_system.Error.exceptions.DeleteAssosiatedRecordsException;
 import jakarta.persistence.*;
 
@@ -27,6 +26,15 @@ public class Patron {
 
     @OneToMany(mappedBy = "patron", orphanRemoval = true)
     List<BorrowingRecord> borrowingRecords;
+
+    public Patron(String name, String number, String email) {
+        this.name = name;
+        this.mobileNumber = number;
+        this.email = email;
+    }
+
+    public Patron() {
+    }
 
     @PreRemove
     public void checkIfAnyBooksAreBorrowed() {

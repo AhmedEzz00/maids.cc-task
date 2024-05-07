@@ -2,9 +2,6 @@ package com.example.library_management_system.config;
 
 import com.example.library_management_system.dto.BookDto;
 import com.example.library_management_system.dto.PatronDto;
-import com.example.library_management_system.entity.Book;
-import com.example.library_management_system.entity.BorrowingRecord;
-import com.example.library_management_system.entity.Patron;
 import com.example.library_management_system.service.BookService;
 import com.example.library_management_system.service.PatronService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -5,7 +5,7 @@ import com.example.library_management_system.Error.exceptions.DuplicatedRecordEx
 import com.example.library_management_system.Error.exceptions.RecordNotFoundException;
 import com.example.library_management_system.dto.PatronDto;
 import com.example.library_management_system.entity.Patron;
-import com.example.library_management_system.repository.PatronRepsitory;
+import com.example.library_management_system.repository.PatronRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
@@ -18,16 +18,16 @@ import java.util.Optional;
 public class PatronService {
 
     @Autowired
-    private PatronRepsitory patronRepsitory;
+    private PatronRepository patronRepository;
 
     @Cacheable(value = "allPatronsCache",key = "#root.methodName")
     public List<Patron> findAll() {
-        return patronRepsitory.findAll();
+        return patronRepository.findAll();
     }
 
     @Cacheable(value = "patronsByIdCache",key = "#id")
     public PatronDto findById(long id) {
-        Optional<Patron> optionalPatron= patronRepsitory.findById(id);
+        Optional<Patron> optionalPatron= patronRepository.findById(id);
         if(!optionalPatron.isPresent()){
             throw new RecordNotFoundException("Patron with id: " +id+" not found");
         }
@@ -41,20 +41,20 @@ public class PatronService {
         patronValidator(patronDto);
         Patron patron = new Patron();
         mapDtoToPatron(patronDto, patron);
-        patronRepsitory.save(patron);
+        patronRepository.save(patron);
         return "patron with name: "+patronDto.getName()+" inserted";
     }
 
 
     @CacheEvict(value = {"allPatronsCache","patronsByIdCache"},key = "#root.methodName",allEntries = true)
     public String update(long id, PatronDto patronDto) {
-        Optional<Patron> optionalPatron= patronRepsitory.findById(id);
+        Optional<Patron> optionalPatron= patronRepository.findById(id);
         if(!optionalPatron.isPresent()){
             throw new RecordNotFoundException("patron with id: "+id+" not found");
         }
         Patron newPatron = optionalPatron.get();
         assignPatronValues(patronDto, newPatron);
-        patronRepsitory.save(newPatron);
+        patronRepository.save(newPatron);
         return "patron with id: "+id+" updated";
 
     }
@@ -62,11 +62,11 @@ public class PatronService {
 
     @CacheEvict(value = {"allPatronsCache","patronsByIdCache"},key = "#root.methodName",allEntries = true)
     public String deleteById(long id) {
-        Optional<Patron> optionalPatron= patronRepsitory.findById(id);
+        Optional<Patron> optionalPatron= patronRepository.findById(id);
         if(!optionalPatron.isPresent()){
             throw new RecordNotFoundException("patron with id: "+id+" not found");
         }
-        patronRepsitory.deleteById(id);
+        patronRepository.deleteById(id);
         return "patron with id: "+id+" deleted";
 
     }
@@ -88,11 +88,11 @@ public class PatronService {
     }
 
     private void patronValidator(PatronDto patronDto) {
-        Optional<Patron> optionalPatron= patronRepsitory.findByEmail(patronDto.getEmail());
+        Optional<Patron> optionalPatron= patronRepository.findByEmail(patronDto.getEmail());
         if(optionalPatron.isPresent()){
             throw new DuplicatedRecordException("patron with email: "+ patronDto.getEmail()+" already exists");
         }
-        optionalPatron= patronRepsitory.findByMobileNumber(patronDto.getMobileNumber());
+        optionalPatron= patronRepository.findByMobileNumber(patronDto.getMobileNumber());
         if(optionalPatron.isPresent()){
             throw new DuplicatedRecordException("patron with mobile number: "+ patronDto.getMobileNumber()+" already exists");
         }

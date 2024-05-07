@@ -8,6 +8,18 @@ import java.util.List;
 
 public class BookDto {
 
+    public BookDto(long id, String title, String author, String publicationYear, String isbn, boolean isAvailable) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.publicationYear = publicationYear;
+        this.isbn = isbn;
+        this.isAvailable = isAvailable;
+    }
+
+    public BookDto() {
+    }
+
     private long id;
 
     @NotEmpty()

@@ -61,18 +61,6 @@ public class BookService {
        return "book with id " + id+" updated";
   }
 
-    @CacheEvict(value = {"allBooksCache","bookByIdCache"},key = "#root.methodName",allEntries = true)
-
-    public String updateBookStatus(Long id,BookDto bookdto){
-      Optional<Book> optionalBook = bookRepository.findById(id);
-      if(!optionalBook.isPresent()){
-          throw new RecordNotFoundException("Book with id: "+ id +" is not found");
-      }
-      Book book = optionalBook.get();
-      book.setAvailable(bookdto.isAvailable());
-      bookRepository.save(book);
-      return "book with id " + id+" updated";
-  }
 
     @CacheEvict(value = {"allBooksCache","bookByIdCache"},key = "#root.methodName",allEntries = true)
 
@@ -85,6 +73,19 @@ public class BookService {
         return "book with id " + id+" deleted";
    }
 
+
+    @CacheEvict(value = {"allBooksCache","bookByIdCache"},key = "#root.methodName",allEntries = true)
+
+    public String updateBookStatus(Long id,BookDto bookdto){
+        Optional<Book> optionalBook = bookRepository.findById(id);
+        if(!optionalBook.isPresent()){
+            throw new RecordNotFoundException("Book with id: "+ id +" is not found");
+        }
+        Book book = optionalBook.get();
+        book.setAvailable(bookdto.isAvailable());
+        bookRepository.save(book);
+        return "book with id " + id+" updated";
+    }
 
 
     private void assignUpdatingBook(Book updating,BookDto dto){
