@@ -9,6 +9,15 @@ import java.util.List;
 
 public class PatronDto {
 
+    public PatronDto(String name, String email, String mobileNumber) {
+        this.name = name;
+        this.email = email;
+        this.mobileNumber = mobileNumber;
+    }
+
+    public PatronDto() {
+    }
+
     private Long id;
     @NotEmpty()
     @Size(max = 50, message = "name cannot be more than 50 characters")
@@ -24,6 +33,8 @@ public class PatronDto {
     private String mobileNumber;
 
     List<BorrowingRecord> borrowingRecords;
+
+
     //private List<Book> books;
 
 

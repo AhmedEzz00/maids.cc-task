@@ -27,7 +27,7 @@ public class Patron {
     @OneToMany(mappedBy = "patron", orphanRemoval = true)
     List<BorrowingRecord> borrowingRecords;
 
-    public Patron(String name, String number, String email) {
+    public Patron(String name, String email, String number) {
         this.name = name;
         this.mobileNumber = number;
         this.email = email;

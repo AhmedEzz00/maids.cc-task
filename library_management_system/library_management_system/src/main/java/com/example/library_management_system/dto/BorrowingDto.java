@@ -5,6 +5,15 @@ import java.util.Date;
 
 public class BorrowingDto {
 
+    public BorrowingDto() {
+    }
+
+
+    public BorrowingDto(Long patronId, Long bookId) {
+        this.patronId = patronId;
+        this.bookId = bookId;
+    }
+
     @NotNull
     private Long patronId;
 

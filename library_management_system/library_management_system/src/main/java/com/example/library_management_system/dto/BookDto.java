@@ -8,8 +8,7 @@ import java.util.List;
 
 public class BookDto {
 
-    public BookDto(long id, String title, String author, String publicationYear, String isbn, boolean isAvailable) {
-        this.id = id;
+    public BookDto( String title, String author, String publicationYear, String isbn, boolean isAvailable) {
         this.title = title;
         this.author = author;
         this.publicationYear = publicationYear;

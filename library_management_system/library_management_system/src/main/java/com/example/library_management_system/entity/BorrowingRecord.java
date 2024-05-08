@@ -6,6 +6,14 @@ import java.util.Date;
 @Entity
 public class BorrowingRecord {
 
+    public BorrowingRecord() {
+    }
+
+    public BorrowingRecord(Long patronId, Long bookId) {
+        this.patronId = patronId;
+        this.bookId = bookId;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

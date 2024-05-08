@@ -70,3 +70,44 @@
 2024-05-07T10:32:18.927-07:00  INFO 11632 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-05-07T10:32:19.140-07:00  INFO 11632 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-05-07T10:32:19.365-07:00  INFO 11632 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-05-07T15:00:22.577-07:00  INFO 1556 --- [main] c.e.l.LibraryManagementSystemApplication : Starting LibraryManagementSystemApplication using Java 20.0.2 with PID 1556 (F:\leetcode\maids.cc-task\library_management_system\library_management_system\target\classes started by Ahmed in F:\leetcode\maids.cc-task)
+2024-05-07T15:00:22.907-07:00  INFO 1556 --- [main] c.e.l.LibraryManagementSystemApplication : No active profile set, falling back to 1 default profile: "default"
+2024-05-07T15:00:24.659-07:00  INFO 1556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-07T15:00:24.859-07:00  INFO 1556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 173 ms. Found 3 JPA repository interfaces.
+2024-05-07T15:00:27.469-07:00  INFO 1556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-05-07T15:00:27.501-07:00  INFO 1556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-07T15:00:27.502-07:00  INFO 1556 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-07T15:00:27.816-07:00  INFO 1556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-07T15:00:27.816-07:00  INFO 1556 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4763 ms
+2024-05-07T15:00:27.977-07:00  INFO 1556 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-07T15:00:28.613-07:00  INFO 1556 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./db/library user=ADDMIN
+2024-05-07T15:00:28.616-07:00  INFO 1556 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-07T15:00:28.637-07:00  INFO 1556 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/db-console'. Database available at 'jdbc:h2:file:./db/library'
+2024-05-07T15:00:29.100-07:00  INFO 1556 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-07T15:00:29.212-07:00  INFO 1556 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.24.Final
+2024-05-07T15:00:29.218-07:00  INFO 1556 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2024-05-07T15:00:30.016-07:00  INFO 1556 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-07T15:00:30.120-07:00  WARN 1556 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-07T15:00:32.099-07:00  INFO 1556 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-07T15:00:32.185-07:00  INFO 1556 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07T15:00:34.089-07:00  WARN 1556 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-07T15:00:35.312-07:00  INFO 1556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-07T15:00:35.331-07:00  INFO 1556 --- [main] c.e.l.LibraryManagementSystemApplication : Started LibraryManagementSystemApplication in 13.828 seconds (process running for 14.854)
+2024-05-07T15:00:35.777-07:00  INFO 1556 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.PatronService.insert(PatronDto)	with args:([Ljava.lang.Object;@7fba30fe) 		took:429ms
+2024-05-07T15:00:35.778-07:00  INFO 1556 --- [main] c.e.l.aspect.LogTimeAspect               : patron with name: Patron1 inserted
+2024-05-07T15:00:35.791-07:00  INFO 1556 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: String com.example.library_management_system.service.PatronService.insert(PatronDto)	with args:([Ljava.lang.Object;@5d1907fb) 		took:13ms
+2024-05-07T15:00:35.791-07:00  INFO 1556 --- [main] c.e.l.aspect.LogTimeAspect               : patron with name: Patron2 inserted
+2024-05-07T15:00:35.810-07:00  INFO 1556 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: BookDto com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@3c070ade) 		took:19ms
+2024-05-07T15:00:35.811-07:00  INFO 1556 --- [main] c.e.l.aspect.LogTimeAspect               : com.example.library_management_system.dto.BookDto@1722ede1
+2024-05-07T15:00:35.817-07:00  INFO 1556 --- [main] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: BookDto com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@307ba188) 		took:6ms
+2024-05-07T15:00:35.818-07:00  INFO 1556 --- [main] c.e.l.aspect.LogTimeAspect               : com.example.library_management_system.dto.BookDto@2c3f81ef
+2024-05-07T15:02:01.258-07:00  INFO 1556 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-07T15:02:01.264-07:00  INFO 1556 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-07T15:02:01.267-07:00  INFO 1556 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-05-07T15:02:01.494-07:00  INFO 1556 --- [http-nio-8080-exec-1] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: List com.example.library_management_system.service.BookService.findAll()	with args:([Ljava.lang.Object;@1b667520) 		took:50ms
+2024-05-07T15:02:24.841-07:00  INFO 1556 --- [http-nio-8080-exec-3] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: BookDto com.example.library_management_system.service.BookService.insert(BookDto)	with args:([Ljava.lang.Object;@789bcc52) 		took:11ms
+2024-05-07T15:02:24.842-07:00  INFO 1556 --- [http-nio-8080-exec-3] c.e.l.aspect.LogTimeAspect               : com.example.library_management_system.dto.BookDto@277f2677
+2024-05-07T15:03:24.684-07:00  INFO 1556 --- [http-nio-8080-exec-6] c.e.l.aspect.LogTimeAspect               : KPI[method-execution]	for: List com.example.library_management_system.service.BookService.findAll()	with args:([Ljava.lang.Object;@215e632b) 		took:4ms
+2024-05-07T15:07:32.215-07:00  INFO 1556 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-07T15:07:32.779-07:00  INFO 1556 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-05-07T15:07:32.833-07:00  INFO 1556 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
